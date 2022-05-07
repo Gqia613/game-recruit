@@ -20,6 +20,8 @@ libpng-dev \
 libpq-dev \
 && docker-php-ext-install pdo_mysql
 
+COPY . ./
+
 # Laravelで必要になるmodRewriteを有効化する
 RUN mv /etc/apache2/mods-available/rewrite.load /etc/apache2/mods-enabled
 RUN /bin/sh -c a2enmod rewrite
