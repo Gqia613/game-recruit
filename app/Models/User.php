@@ -5,36 +5,34 @@ namespace App\Models;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
+use App\Models\Friend;
 
 class User extends Authenticatable
 {
-    use HasFactory, Notifiable;
+    use HasFactory;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
+    protected $table = 'users';
+
     protected $fillable = [
-        'name', 'email', 'password',
+        'user_name',
+        'password',
+        'icon',
+        'game',
+        'introduction',
     ];
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
+    public static $rules = array(
+        'user_name' => 'required|unique:users|max:256',
+        'password' => 'required|min:6',
+        'icon' => 'file|mimes:jpg,png,webp,svg',
+        'game' => 'max:5000',
+        'introduction' => 'max:5000',
+    );
 
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+    public static $messages = array(
+        'user_name.required' => '＊ユーザーネームは必須です',
+        'user_name.unique' => '＊そのユーザーネームは既に使用されています',
+        'password.required' => '＊パスワードは必須です',
+        'password.min' => '＊パスワードは6文字以上で設定してください',
+    );
 }

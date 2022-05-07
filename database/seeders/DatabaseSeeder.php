@@ -3,6 +3,9 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Database\Seeders\MstGameSeeder;
+use Database\Seeders\MstStyleSeeder;
+use Database\Seeders\CreateUserSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,6 +16,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // User::factory(10)->create();
+        $this->call([
+            MstGameSeeder::class,
+            MstStyleSeeder::class,
+            CreateUserSeeder::class,
+        ]);
     }
 }
