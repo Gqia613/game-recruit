@@ -34,5 +34,3 @@ build:
     web: ./docker/app/Dockerfile
   config:
     WORKDIR: /var/www/html
-run:
-  web: php artisan serve
