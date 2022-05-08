@@ -30,6 +30,7 @@ setup:
     PUSHER_APP_SECRET: 20a8d3949b0da676bd3f
     PUSHER_APP_CLUSTER: ap3
 build:
+  context: ./
   docker:
     web: ./docker/production/Dockerfile
 run:

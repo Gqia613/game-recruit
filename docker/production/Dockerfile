@@ -2,8 +2,8 @@ FROM php:7.4-apache
 
 # 設定ファイルをdockerコンテナ内のPHP、Apacheに読み込ませる
 # ADD：ローカルのファイルをDockerコンテナ内にコピーする
-ADD php.ini /usr/local/etc/php/
-ADD 000-default.conf /etc/apache2/sites-enabled/
+ADD /docker/productionphp.ini /usr/local/etc/php/
+ADD /docker/production000-default.conf /etc/apache2/sites-enabled/
 
 # Composerのインストール
 # RUN：コンテナ内でコマンド実行する
@@ -19,10 +19,7 @@ vim \
 libpng-dev \
 libpq-dev
 
-RUN rm -rf /etc/apache2/mods-enabled/mpm_event.conf
-RUN rm -rf /etc/apache2/mods-enabled/mpm_event.load
-
-COPY ../.. /var/www/html
+COPY . /var/www/html
 
 RUN mv /etc/apache2/mods-available/rewrite.load /etc/apache2/mods-enabled
 RUN /bin/sh -c a2enmod rewrite
