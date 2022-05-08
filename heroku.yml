@@ -33,4 +33,4 @@ build:
   docker:
     web: ./Dockerfile
 run:
-  web: php artisan serve
+  web: php artisan --port=5000

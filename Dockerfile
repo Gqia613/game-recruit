@@ -25,7 +25,3 @@ RUN composer install
 
 RUN mv /etc/apache2/mods-available/rewrite.load /etc/apache2/mods-enabled
 RUN /bin/sh -c a2enmod rewrite
-
-ENV PORT 5000
-
-CMD sed -i "s/80/$PORT/g"
