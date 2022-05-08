@@ -25,5 +25,3 @@ RUN composer install
 
 RUN mv /etc/apache2/mods-available/rewrite.load /etc/apache2/mods-enabled
 RUN /bin/sh -c a2enmod rewrite
-
-RUN rm -rf /etc/apache2/mods-enabled

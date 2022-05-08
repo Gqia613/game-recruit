@@ -32,3 +32,5 @@ setup:
 build:
   docker:
     web: ./Dockerfile
+run:
+  web: php artisan serve
