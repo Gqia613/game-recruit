@@ -31,6 +31,6 @@ setup:
     PUSHER_APP_CLUSTER: ap3
 build:
   docker:
-    web: ./docker/app/Dockerfile
+    web: ./docker/production/Dockerfile
   config:
     WORKDIR: /var/www/html
