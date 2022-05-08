@@ -19,6 +19,9 @@ vim \
 libpng-dev \
 libpq-dev
 
+RUN rm /etc/apache2/mods-enabled/mpm_prefork.*
+
 COPY . /var/www/html
 
 RUN mv /etc/apache2/mods-available/rewrite.load /etc/apache2/mods-enabled
+RUN /bin/sh -c a2enmod rewrite
