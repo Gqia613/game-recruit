@@ -33,6 +33,6 @@ build:
   docker:
     web: ./docker/production/Dockerfile
   config:
-    WORKDIR: /var/www/html
+    WORKDIR: app
 run:
   web: vendor/bin/heroku-php-apache2 public/
