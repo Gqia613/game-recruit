@@ -19,7 +19,8 @@ vim \
 libpng-dev \
 libpq-dev
 
-RUN rm /etc/apache2/mods-enabled/mpm_prefork.*
+RUN rm /etc/apache2/mods-enabled/mpm_prefork.conf
+RUN rm /etc/apache2/mods-enabled/mpm_prefork.load
 
 COPY . /var/www/html
 
