@@ -19,4 +19,6 @@ vim \
 libpng-dev \
 libpq-dev
 
-COPY . ./
+COPY . /var/www/html
+
+RUN mv /etc/apache2/mods-available/rewrite.load /etc/apache2/mods-enabled
