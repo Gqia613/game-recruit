@@ -2,8 +2,8 @@ FROM php:7.4-apache
 
 # 設定ファイルをdockerコンテナ内のPHP、Apacheに読み込ませる
 # ADD：ローカルのファイルをDockerコンテナ内にコピーする
-ADD /docker/productionphp.ini /usr/local/etc/php/
-ADD /docker/production000-default.conf /etc/apache2/sites-enabled/
+ADD php.ini /usr/local/etc/php/
+ADD 000-default.conf /etc/apache2/sites-enabled/
 
 # Composerのインストール
 # RUN：コンテナ内でコマンド実行する
