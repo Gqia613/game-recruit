@@ -33,4 +33,4 @@ build:
   docker:
     web: ./Dockerfile
 run:
-  web: php artisan serve --port=5000
+  web: php artisan serve --host=game-recruit-back.herokuapp.com --port=5000
