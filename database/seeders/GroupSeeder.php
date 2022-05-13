@@ -2,9 +2,9 @@
 
 namespace Database\Seeders;
 
+use Illuminate\Database\Seeder;
 use App\Models\Group;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Database\Seeder;
 
 class GroupSeeder extends Seeder
 {
