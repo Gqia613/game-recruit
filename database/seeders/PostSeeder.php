@@ -3,8 +3,8 @@
 namespace Database\Seeders;
 
 use App\Models\Post;
-use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Seeder;
 
 class PostSeeder extends Seeder
 {
@@ -21,68 +21,50 @@ class PostSeeder extends Seeder
 
         $params = [
             [
-                'group_id' => 1,
+                'group_id'    => 1,
                 'status_flag' => 1,
-                'created_at' => '2022-2-17 00:00:00',
-                'updated_at' => '2022-2-17 00:00:00',
             ],
             [
-                'group_id' => 2,
+                'group_id'    => 2,
                 'status_flag' => 1,
-                'created_at' => '2022-2-17 00:00:00',
-                'updated_at' => '2022-2-17 00:00:00',
             ],
             [
-                'group_id' => 3,
+                'group_id'    => 3,
                 'status_flag' => 1,
-                'created_at' => '2022-2-17 00:00:00',
-                'updated_at' => '2022-2-17 00:00:00',
             ],
             [
-                'group_id' => 4,
+                'group_id'    => 4,
                 'status_flag' => 1,
-                'created_at' => '2022-2-17 00:00:00',
-                'updated_at' => '2022-2-17 00:00:00',
             ],
             [
-                'group_id' => 5,
+                'group_id'    => 5,
                 'status_flag' => 1,
-                'created_at' => '2022-2-17 00:00:00',
-                'updated_at' => '2022-2-17 00:00:00',
             ],
             [
-                'group_id' => 6,
+                'group_id'    => 6,
                 'status_flag' => 1,
-                'created_at' => '2022-2-17 00:00:00',
-                'updated_at' => '2022-2-17 00:00:00',
             ],
             [
-                'group_id' => 7,
+                'group_id'    => 7,
                 'status_flag' => 1,
-                'created_at' => '2022-2-17 00:00:00',
-                'updated_at' => '2022-2-17 00:00:00',
             ],
             [
                 'group_id' => 8,
                 'status_flag' => 1,
-                'created_at' => '2022-2-17 00:00:00',
-                'updated_at' => '2022-2-17 00:00:00',
             ],
             [
                 'group_id' => 9,
                 'status_flag' => 1,
-                'created_at' => '2022-2-17 00:00:00',
-                'updated_at' => '2022-2-17 00:00:00',
             ],
             [
                 'group_id' => 10,
                 'status_flag' => 1,
-                'created_at' => '2022-2-17 00:00:00',
-                'updated_at' => '2022-2-17 00:00:00',
             ],
         ];
         
         Post::upsert($params, ['id']);
+
+        // 外部キー貼り直す
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
     }
 }
