@@ -22,43 +22,43 @@ class PostSeeder extends Seeder
         $params = [
             [
                 'group_id'    => 1,
-                'status_flag' => 1,
+                'status_flag' => 0,
             ],
             [
                 'group_id'    => 2,
-                'status_flag' => 1,
+                'status_flag' => 0,
             ],
             [
                 'group_id'    => 3,
-                'status_flag' => 1,
+                'status_flag' => 0,
             ],
             [
                 'group_id'    => 4,
-                'status_flag' => 1,
+                'status_flag' => 0,
             ],
             [
                 'group_id'    => 5,
-                'status_flag' => 1,
+                'status_flag' => 0,
             ],
             [
                 'group_id'    => 6,
-                'status_flag' => 1,
+                'status_flag' => 0,
             ],
             [
                 'group_id'    => 7,
-                'status_flag' => 1,
+                'status_flag' => 0,
             ],
             [
                 'group_id' => 8,
-                'status_flag' => 1,
+                'status_flag' => 0,
             ],
             [
                 'group_id' => 9,
-                'status_flag' => 1,
+                'status_flag' => 0,
             ],
             [
                 'group_id' => 10,
-                'status_flag' => 1,
+                'status_flag' => 0,
             ],
         ];
         
