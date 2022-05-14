@@ -39,8 +39,6 @@ ENV APACHE_DOCUMENT_ROOT /var/www/html/
 
 RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf \
   && sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf \
-  && sed -ri -e 's!/etc/ssl/certs/ssl-cert-snakeoil.pem!/etc/apache2/ssl/localhost+3.pem!g' /etc/apache2/sites-available/default-ssl.conf \
-  && sed -ri -e 's!/etc/ssl/private/ssl-cert-snakeoil.key!/etc/apache2/ssl/localhost+3-key.pem!g' /etc/apache2/sites-available/default-ssl.conf \
   && a2enmod rewrite \
   && a2enmod headers \
   && a2enmod ssl \
