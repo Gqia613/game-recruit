@@ -29,7 +29,7 @@ class Group extends Model
     public static $rules = [
         'group_name' => 'required|max:256',
         'leader_id' => 'required',
-        'icon' => 'file|mimes:jpg,png,webp,svg',
+        'icon' => 'nullable|file|mimes:jpg,png,webp,svg',
         'recruitment' => 'required|numeric',
         'style_id' => 'required|numeric',
         'game_id' => 'required|numeric',
