@@ -23,6 +23,13 @@ class CreateUserSeeder extends Seeder
 
         $params = [
             [
+                'user_name'    => 'admin',
+                'password'     => 'password',
+                'icon'         => null,
+                'game'         => 'シージ/イナイレ',
+                'introduction' => '基本的にシージをメインでやる！',
+            ],
+            [
                 'user_name'    => '大城由晃',
                 'password'     => Hash::make('password'),
                 'icon'         => null,
