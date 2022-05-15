@@ -30,4 +30,5 @@ RUN /bin/sh -c a2enmod rewrite
 # CMD sed -i -e "s/Listen 80/Listen $PORT/g" /usr/local/apache2/conf/httpd.conf && httpd-foreground
 RUN sed -i "s/Listen 80/Listen $PORT/g" /etc/apache2/ports.conf
 RUN sed -i "s/Listen 80/Listen $PORT/g" /etc/apache2/apache2.conf
-RUN sed -i "s/VirtualHost \*:80/VirtualHost \*:$PORT/g" /etc/apache2/sites-available/000-default.conf
+RUN sed -i "s/Listen 80/Listen $PORT/g" /etc/apache2/sites-available/000-default.conf
+# RUN sed -i "s/VirtualHost \*:80/VirtualHost \*:$PORT/g" /etc/apache2/sites-available/000-default.conf
