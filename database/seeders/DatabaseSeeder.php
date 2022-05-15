@@ -20,6 +20,8 @@ class DatabaseSeeder extends Seeder
             MstGameSeeder::class,
             MstStyleSeeder::class,
             CreateUserSeeder::class,
+            GroupSeeder::class,
+            GroupMemberSeeder::class,
         ]);
     }
 }

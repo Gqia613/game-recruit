@@ -14,6 +14,8 @@ class MstGameSeeder extends Seeder
      */
     public function run()
     {
+        MstGame::truncate();
+
         $gameNames = [
             'Rainbow Six Siege - レインボーシックス　シージ',
             'Apex Legends - エーペックスレジェンズ',

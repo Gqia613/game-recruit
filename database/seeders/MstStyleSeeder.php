@@ -14,6 +14,8 @@ class MstStyleSeeder extends Seeder
      */
     public function run()
     {
+        MstStyle::truncate();
+        
         $styleNames = [
             'エンジョイ勢',
             'ガチ勢',
